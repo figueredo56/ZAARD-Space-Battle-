@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ZAARD BATTLE - Batalla Extrema, Disparos Continuos & Recompensas ZARD</title>
+    <title>ZAARD BATTLE - Batalla Espacial Progresiva, Brillos & Recompensas ZARD</title>
     <style>
         :root {
             --bg-dark: #05020d;
@@ -196,7 +196,7 @@
         .screen {
             width: 100%;
             max-width: 1280px;
-            padding: 20px 18px 28px;
+            padding: 18px 14px 28px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -363,10 +363,16 @@
             background: var(--card-bg);
             border: 1.5px solid rgba(192, 132, 252, 0.65);
             border-radius: 18px;
-            padding: 22px;
+            padding: 20px 16px;
             box-shadow: 0 0 38px rgba(147, 51, 234, 0.35), inset 0 0 22px rgba(34, 211, 238, 0.08);
             backdrop-filter: blur(8px);
             position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .card-panel {
+                padding: 24px;
+            }
         }
 
         .payout-pill {
@@ -396,10 +402,17 @@
             font-weight: 900;
             font-size: 0.88rem;
             letter-spacing: 0.4px;
-            background: linear-gradient(90deg, rgba(239, 68, 68, 0.22), rgba(147, 51, 234, 0.25), rgba(34, 211, 238, 0.22));
-            border: 1.5px solid var(--neon-red);
+            background: linear-gradient(90deg, rgba(34, 211, 238, 0.22), rgba(147, 51, 234, 0.25), rgba(255, 107, 26, 0.22));
+            border: 1.5px solid var(--neon-cyan);
+            color: #cffafe;
+            box-shadow: 0 0 18px rgba(34, 211, 238, 0.32);
+        }
+
+        .live-status-banner.extreme {
+            border-color: var(--neon-red);
             color: #fecdd3;
-            box-shadow: 0 0 18px rgba(251, 113, 133, 0.32);
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.28), rgba(255, 107, 26, 0.28), rgba(168, 85, 247, 0.28));
+            box-shadow: 0 0 22px rgba(251, 113, 133, 0.45);
         }
 
         .stats-bar {
@@ -429,15 +442,16 @@
             text-shadow: 0 0 10px rgba(34, 211, 238, 0.55);
         }
 
+        /* ARENA AGRANDADA */
         .battle-stage {
             position: relative;
             width: 100%;
-            max-width: 680px;
+            max-width: 820px;
             margin: 0 auto 14px auto;
-            border-radius: 20px;
+            border-radius: 22px;
             overflow: hidden;
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 42px rgba(34, 211, 238, 0.42), 0 0 28px rgba(168, 85, 247, 0.38);
+            border: 2.5px solid var(--neon-cyan);
+            box-shadow: 0 0 46px rgba(34, 211, 238, 0.46), 0 0 32px rgba(168, 85, 247, 0.42);
             background: #050212;
             cursor: ew-resize;
             touch-action: none;
@@ -489,18 +503,18 @@
         canvas {
             display: block;
             width: 100%;
-            height: 540px;
+            height: 620px;
         }
 
         @media (min-width: 900px) {
             canvas {
-                height: 600px;
+                height: 690px;
             }
         }
 
         @media (max-width: 560px) {
             canvas {
-                height: 460px;
+                height: 540px;
             }
         }
 
@@ -707,20 +721,20 @@
             <div class="floating-logo-container">
                 <img src="https://photos.pinksale.finance/file/pinksale-logo-upload/1790285851823-4955b8f5511ea8235af22dfb82371c91.png" alt="Logo ZAARD BATTLE" class="floating-logo">
             </div>
-            <h1>🚀⚡ ZAARD BATTLE — BATALLA EXTREMA & DISPAROS CONTINUOS ⚡🚀</h1>
+            <h1>🚀⚡ ZAARD BATTLE — BATALLA PROGRESIVA, BRILLOS & DISPAROS CONTINUOS ⚡🚀</h1>
             <p class="welcome-desc">
-                Los enemigos bajan desde arriba disparando cada segundo y aumentando en número y velocidad. Tu <strong>Nave ZAARD</strong> suelta <strong>disparos continuos</strong>: un choque o un disparo enemigo te mata en el intento, ¡esquiva y sobrevive hasta las <strong>1.000 monedas</strong> por <strong>0.001 ZARD</strong>!
+                Arranca suave para que calientes motores y ve subiendo de a poco hasta volverse <strong>bien peludo al pasar las 750–800 monedas</strong>. Tu <strong>Nave ZAARD</strong> suelta <strong>disparos continuos</strong> con brillos y chispas: un choque o bala enemiga te mata en el intento hacia las <strong>1.000 monedas</strong> por <strong>0.001 ZARD</strong>.
             </p>
             <div class="rules-list-welcome">
                 <ul style="list-style-position: inside;">
-                    <li><strong>Disparos Continuos:</strong> La <strong>Nave ZAARD</strong> dispara sin parar; tú solo muévela arrastrando el dedo/ratón o con <strong>A/D / Flechas</strong>.</li>
-                    <li><strong>Choque o Disparo Enemigo = Te Mata:</strong> Enemigos disparan cada ~1 segundo. Si te toca un enemigo o su bala, pierdes 1 de tus <strong>6 intentos</strong>.</li>
-                    <li><strong>Dificultad Extrema:</strong> Cada oleada trae más enemigos y mayor velocidad para llegar a <strong>1.000 monedas</strong> (Vault <code>0x327f...C1A8</code>).</li>
+                    <li><strong>Progresión Gradual:</strong> Empieza tranquilo con pocas naves y sube poco a poco; al llegar a <strong>750–800 monedas</strong> se vuelve una locura de enemigos y balas.</li>
+                    <li><strong>Disparos Continuos & Brillos:</strong> Tu <strong>Nave ZAARD</strong> brilla con chispas y dispara sin parar; guíala arrastrando el dedo/ratón o con <strong>A/D / Flechas</strong>.</li>
+                    <li><strong>Choque o Disparo Enemigo = Te Mata:</strong> Enemigos disparan periódicamente; si te toca un enemigo o su bala, pierdes 1 de tus <strong>6 intentos</strong>.</li>
                     <li><strong>Apuesta & Ecosistema:</strong> Modo Apuesta 0.0001 BNB hacia <code>0x84f5...cdc8</code> + balances en vivo de <strong>PANGA</strong>, <strong>ZARED</strong> y <strong>ZYM</strong>.</li>
                 </ul>
             </div>
             <button class="btn-action" onclick="iniciarBatallaDirecta()">
-                GO ZARD BATTLE<br>!!DISPAROS CONTINUOS ARRIBA!!
+                GO ZARD BATTLE<br>!!ARRANCAR CON BRILLOS & CHISPAS!!
             </button>
         </div>
     </div>
@@ -729,8 +743,8 @@
     <div id="screenLoading" class="screen hidden">
         <div class="loading-box">
             <div class="spinner"></div>
-            <h2 style="color: var(--neon-cyan); margin-bottom: 10px;">🚀⚡ Encendiendo Cañones Continuos de la Nave ZAARD...</h2>
-            <p style="color: #d8b4fe;">Cargando oleadas enemigas desde arriba y conectando bóveda 0x327f...C1A8...</p>
+            <h2 style="color: var(--neon-cyan); margin-bottom: 10px;">🚀⚡ Encendiendo Brillos y Cañones de la Nave ZAARD...</h2>
+            <p style="color: #d8b4fe;">Preparando oleadas progresivas y conectando bóveda 0x327f...C1A8...</p>
         </div>
     </div>
 
@@ -753,7 +767,7 @@
                 </div>
 
                 <div class="live-status-banner" id="liveStatusBanner">
-                    🔥 ¡DISPAROS CONTINUOS! ENEMIGOS DISPARAN CADA 1s • CHOQUE O BALA TE MATA (6 INTENTOS) 🔥
+                    ✨🚀 NAVE ZAARD EN ACCIÓN • ARRANQUE SUAVE → MODO PELUDO EN 750–800 MONEDAS 🚀✨
                 </div>
 
                 <div class="stats-bar">
@@ -784,11 +798,11 @@
                         <div class="stage-spark sp2"></div>
                         <div class="stage-spark sp3"></div>
                     </div>
-                    <canvas id="gameCanvas" width="680" height="600"></canvas>
+                    <canvas id="gameCanvas" width="820" height="690"></canvas>
                 </div>
 
                 <div class="tap-hint-bar">
-                    <span>🚀 <strong>Ráfaga continua activa</strong> • <strong>Arrastra / Toca / Flechas</strong> para esquivar balas y enemigos</span>
+                    <span>✨ <strong>Disparos continuos + chispas</strong> • <strong>Arrastra / Toca / Flechas</strong> para mover la Nave ZAARD</span>
                     <span style="color:#67e8f9; font-weight:700;">Baúl: 0x327f...C1A8</span>
                 </div>
 
@@ -1110,7 +1124,7 @@
             }
         }
 
-        // Motor ZAARD BATTLE EXTREMA
+        // Motor ZAARD BATTLE con curva gradual hasta ~750-800 monedas
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         const battleStage = document.getElementById('battleStage');
@@ -1121,37 +1135,96 @@
         let clearedEnemies = 0;
         let waveLevel = 1;
         let invulnerable = 0;
-        let enemySpawnTimer = 18;
-        let coinSpawnTimer = 44;
+        let enemySpawnTimer = 42;
+        let coinSpawnTimer = 34;
         let continuousFireTimer = 0;
         let enginePulse = 0;
         let killFlashTimer = 0;
 
         const ship = {
             x: canvas.width / 2,
-            y: canvas.height - 68,
-            w: 54,
-            h: 54,
+            y: canvas.height - 78,
+            w: 68,
+            h: 68,
             targetX: canvas.width / 2
         };
 
         let keys = { left: false, right: false };
-        let bullets = []; // { x, y, r, vy }
-        let enemyBullets = []; // { x, y, r, vx, vy }
-        let enemies = []; // { kind: 'ufo' | 'pod' | 'meteor', x, y, r, hp, vy, vx, phase, shootTimer }
-        let coinDrops = []; // { x, y, r, vy }
+        let bullets = [];
+        let enemyBullets = [];
+        let enemies = [];
+        let coinDrops = [];
         let sparks = [];
         let stars = [];
         let spaceDecos = [];
 
+        function getDifficultyProfile() {
+            // 0-749: escala suave y gradual; 750-1000: modo peludo
+            if (coins < 120) {
+                return {
+                    level: 1,
+                    spawnFrames: 66,
+                    maxPerWave: 1,
+                    enemySpeed: 1.9,
+                    shootFrames: 92,
+                    bulletSpeed: 3.8,
+                    extreme: false
+                };
+            }
+            if (coins < 280) {
+                return {
+                    level: 2 + Math.floor((coins - 120) / 80),
+                    spawnFrames: 54,
+                    maxPerWave: 1,
+                    enemySpeed: 2.35,
+                    shootFrames: 82,
+                    bulletSpeed: 4.2,
+                    extreme: false
+                };
+            }
+            if (coins < 520) {
+                return {
+                    level: 4 + Math.floor((coins - 280) / 85),
+                    spawnFrames: 42,
+                    maxPerWave: 2,
+                    enemySpeed: 2.85,
+                    shootFrames: 70,
+                    bulletSpeed: 4.7,
+                    extreme: false
+                };
+            }
+            if (coins < 750) {
+                return {
+                    level: 7 + Math.floor((coins - 520) / 80),
+                    spawnFrames: 30,
+                    maxPerWave: 2,
+                    enemySpeed: 3.45,
+                    shootFrames: 58,
+                    bulletSpeed: 5.3,
+                    extreme: false
+                };
+            }
+            // Tramo final (750 a 1.000 monedas): ¡bien peludo!
+            const fury = Math.min(1, (coins - 750) / 250);
+            return {
+                level: 10 + Math.floor(fury * 5),
+                spawnFrames: Math.max(11, Math.round(20 - fury * 9)),
+                maxPerWave: fury > 0.45 ? 4 : 3,
+                enemySpeed: 4.2 + fury * 1.6,
+                shootFrames: Math.max(34, Math.round(46 - fury * 12)),
+                bulletSpeed: 5.9 + fury * 1.4,
+                extreme: true
+            };
+        }
+
         function initSpaceField() {
             stars = [];
-            for (let i = 0; i < 65; i++) {
+            for (let i = 0; i < 75; i++) {
                 stars.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    size: 1 + Math.random() * 2.4,
-                    spd: 2.2 + Math.random() * 3.8,
+                    size: 1.2 + Math.random() * 2.6,
+                    spd: 1.8 + Math.random() * 3.2,
                     alpha: 0.35 + Math.random() * 0.65
                 });
             }
@@ -1160,10 +1233,10 @@
             for (let i = 0; i < 5; i++) {
                 spaceDecos.push({
                     spriteIdx: i % spaceDecoSprites.length,
-                    x: 70 + i * 135,
-                    y: -90 - i * 150,
-                    size: 46 + (i % 2) * 12,
-                    spd: 1.5 + (i % 3) * 0.5,
+                    x: 80 + i * 165,
+                    y: -90 - i * 160,
+                    size: 54 + (i % 2) * 14,
+                    spd: 1.4 + (i % 3) * 0.45,
                     alpha: 0.42
                 });
             }
@@ -1193,8 +1266,8 @@
             waveLevel = 1;
             invulnerable = 0;
             killFlashTimer = 0;
-            enemySpawnTimer = 16;
-            coinSpawnTimer = 38;
+            enemySpawnTimer = 36;
+            coinSpawnTimer = 28;
             continuousFireTimer = 0;
             ship.x = canvas.width / 2;
             ship.targetX = canvas.width / 2;
@@ -1234,7 +1307,7 @@
             const rect = battleStage.getBoundingClientRect();
             if (!rect.width) return;
             const norm = (clientX - rect.left) / rect.width;
-            const clamped = Math.max(0.08, Math.min(0.92, norm));
+            const clamped = Math.max(0.07, Math.min(0.93, norm));
             ship.targetX = clamped * canvas.width;
         }
 
@@ -1255,116 +1328,126 @@
         }, { passive: false });
 
         function updateHud() {
-            waveLevel = Math.min(15, 1 + Math.floor(coins / 65));
+            const prof = getDifficultyProfile();
+            waveLevel = prof.level;
             document.getElementById('hudCoins').innerText = coins.toLocaleString('es-ES');
             document.getElementById('hudLives').innerText = lives;
             document.getElementById('hudDiff').innerText = `Nv. ${waveLevel}`;
             document.getElementById('hudCleared').innerText = clearedEnemies;
+
+            const banner = document.getElementById('liveStatusBanner');
+            if (banner) {
+                if (prof.extreme) {
+                    banner.classList.add('extreme');
+                    banner.innerText = "🔥💀 ¡MODO PELUDO (+750 MONEDAS)! LLUVIA DE ENEMIGOS & BALAS A TOPE 💀🔥";
+                } else {
+                    banner.classList.remove('extreme');
+                    banner.innerText = `✨🚀 NAVE ZAARD EN ACCIÓN (Nv. ${waveLevel}) • SE PONE PELUDO EN 750–800 MONEDAS 🚀✨`;
+                }
+            }
         }
 
         function spawnSparks(x, y, color, qty = 10) {
             for (let i = 0; i < qty; i++) {
                 const ang = Math.random() * Math.PI * 2;
-                const spd = 1.6 + Math.random() * 4.5;
+                const spd = 1.6 + Math.random() * 4.8;
                 sparks.push({
                     x, y,
                     vx: Math.cos(ang) * spd,
                     vy: Math.sin(ang) * spd,
-                    life: 22,
+                    life: 24,
                     color
                 });
             }
         }
 
-        // Disparos continuos de la Nave ZAARD
         function fireContinuousStream() {
-            bullets.push({ x: ship.x - 13, y: ship.y - 24, r: 5, vy: -13.5 });
-            bullets.push({ x: ship.x + 13, y: ship.y - 24, r: 5, vy: -13.5 });
-            if (waveLevel >= 3) {
-                bullets.push({ x: ship.x, y: ship.y - 28, r: 5.5, vy: -14.2 });
+            bullets.push({ x: ship.x - 16, y: ship.y - 28, r: 6, vy: -14 });
+            bullets.push({ x: ship.x + 16, y: ship.y - 28, r: 6, vy: -14 });
+            if (waveLevel >= 4) {
+                bullets.push({ x: ship.x, y: ship.y - 34, r: 6.5, vy: -14.8 });
             }
-            playTone(820, 1240, 0.04, 'square', 0.025);
+            playTone(820, 1240, 0.04, 'square', 0.022);
         }
 
         function spawnEnemyWave() {
-            // Cada nivel manda más enemigos simultáneos y más rápido
-            const count = Math.min(4, 1 + Math.floor(waveLevel / 3));
-            for (let k = 0; k < count; k++) {
+            const prof = getDifficultyProfile();
+            for (let k = 0; k < prof.maxPerWave; k++) {
                 const roll = Math.random();
-                const margin = 42;
+                const margin = 52;
                 const x = margin + Math.random() * (canvas.width - margin * 2);
-                const baseVy = 2.8 + waveLevel * 0.34 + Math.random() * 1.3;
-                // Disparan aproximadamente cada 1 segundo (~55-65 frames a 60fps)
-                const shootInterval = Math.max(42, 62 - waveLevel * 2);
+                const vy = prof.enemySpeed + Math.random() * 0.65;
 
                 if (roll < 0.48) {
                     enemies.push({
                         kind: 'ufo',
                         x,
-                        y: -36 - k * 48,
-                        r: 22,
-                        hp: waveLevel >= 5 ? 2 : 1,
-                        vy: baseVy,
-                        vx: (Math.random() < 0.5 ? -1 : 1) * (1.4 + waveLevel * 0.18),
+                        y: -44 - k * 64,
+                        r: 26,
+                        hp: waveLevel >= 8 ? 2 : 1,
+                        vy,
+                        vx: (Math.random() < 0.5 ? -1 : 1) * (0.8 + waveLevel * 0.12),
                         phase: Math.random() * Math.PI * 2,
-                        shootTimer: 25 + Math.floor(Math.random() * shootInterval),
-                        shootInterval
+                        shootTimer: 35 + Math.floor(Math.random() * prof.shootFrames),
+                        shootInterval: prof.shootFrames,
+                        bulletSpeed: prof.bulletSpeed
                     });
                 } else if (roll < 0.78) {
                     enemies.push({
                         kind: 'pod',
                         x,
-                        y: -36 - k * 48,
-                        r: 21,
-                        hp: waveLevel >= 4 ? 2 : 1,
-                        vy: baseVy * 0.95,
+                        y: -44 - k * 64,
+                        r: 25,
+                        hp: waveLevel >= 7 ? 2 : 1,
+                        vy: vy * 0.92,
                         vx: 0,
                         phase: 0,
-                        shootTimer: 30 + Math.floor(Math.random() * shootInterval),
-                        shootInterval
+                        shootTimer: 40 + Math.floor(Math.random() * prof.shootFrames),
+                        shootInterval: prof.shootFrames,
+                        bulletSpeed: prof.bulletSpeed
                     });
                 } else {
                     enemies.push({
                         kind: 'meteor',
                         x,
-                        y: -36 - k * 48,
-                        r: 20,
+                        y: -44 - k * 64,
+                        r: 24,
                         hp: 1,
-                        vy: baseVy * 1.32,
-                        vx: (Math.random() - 0.5) * 2.2,
+                        vy: vy * 1.18,
+                        vx: (Math.random() - 0.5) * 1.5,
                         phase: 0,
                         shootTimer: 9999,
-                        shootInterval: 9999
+                        shootInterval: 9999,
+                        bulletSpeed: prof.bulletSpeed
                     });
                 }
             }
 
-            // Spawn más agresivo conforme aumenta la dificultad
-            enemySpawnTimer = Math.max(9, 28 - waveLevel * 1.8) + Math.floor(Math.random() * 7);
+            enemySpawnTimer = prof.spawnFrames + Math.floor(Math.random() * 10);
         }
 
         function fireEnemyShot(en) {
-            if (en.y < 20 || en.y > canvas.height - 140) return;
+            if (en.y < 24 || en.y > canvas.height - 160) return;
             const aimAngle = Math.atan2(ship.y - en.y, ship.x - en.x);
-            const spread = waveLevel >= 4 ? (Math.random() - 0.5) * 0.32 : (Math.random() - 0.5) * 0.14;
-            const bulletSpeed = 4.6 + waveLevel * 0.32;
+            const spread = waveLevel >= 8 ? (Math.random() - 0.5) * 0.28 : (Math.random() - 0.5) * 0.1;
+            const spd = en.bulletSpeed || 4.2;
             enemyBullets.push({
                 x: en.x,
-                y: en.y + en.r * 0.6,
-                r: 6.5,
-                vx: Math.cos(aimAngle + spread) * bulletSpeed * 0.72,
-                vy: Math.max(4.2, Math.sin(aimAngle + spread) * bulletSpeed)
+                y: en.y + en.r * 0.65,
+                r: 7.5,
+                vx: Math.cos(aimAngle + spread) * spd * 0.68,
+                vy: Math.max(3.6, Math.sin(aimAngle + spread) * spd)
             });
         }
 
         function spawnCoinFromTop() {
             coinDrops.push({
-                x: 42 + Math.random() * (canvas.width - 84),
-                y: -26,
-                r: 14,
-                vy: 2.7 + waveLevel * 0.18
+                x: 48 + Math.random() * (canvas.width - 96),
+                y: -30,
+                r: 17,
+                vy: 2.5 + waveLevel * 0.14
             });
-            coinSpawnTimer = 42 + Math.floor(Math.random() * 24);
+            coinSpawnTimer = 34 + Math.floor(Math.random() * 20);
         }
 
         function handlePlayerFatalHit(reasonText) {
@@ -1373,7 +1456,7 @@
             invulnerable = 70;
             killFlashTimer = 14;
             playPuuu();
-            spawnSparks(ship.x, ship.y, '#fb7185', 22);
+            spawnSparks(ship.x, ship.y, '#fb7185', 24);
             updateHud();
             if (lives <= 0) {
                 finishBatalla(false, reasonText);
@@ -1391,7 +1474,7 @@
                 playTululu();
                 title.style.color = "#34d399";
                 title.innerText = "🏆 ¡HAZ IMPOSIBLE SUPERADA! 1.000 MONEDAS 🏆";
-                desc.innerHTML = `Sobreviviste a la oleada extrema y llegaste a <strong>1.000 monedas</strong> derribando <strong>${clearedEnemies} enemigos</strong>.<br>Recompensa: <strong>${PRIZE_ZARD_AMOUNT}</strong>.<br><small style="color:#67e8f9;">Contrato Baúl: <code>${ZAARD_VAULT_CONTRACT}</code></small>`;
+                desc.innerHTML = `Sobreviviste hasta las <strong>1.000 monedas</strong> derribando <strong>${clearedEnemies} enemigos</strong>.<br>Recompensa: <strong>${PRIZE_ZARD_AMOUNT}</strong>.<br><small style="color:#67e8f9;">Contrato Baúl: <code>${ZAARD_VAULT_CONTRACT}</code></small>`;
             } else {
                 playPuuu();
                 title.style.color = "#fb7185";
@@ -1409,18 +1492,33 @@
         function update() {
             if (!running) return;
 
+            const prof = getDifficultyProfile();
             enginePulse += 0.28;
             if (invulnerable > 0) invulnerable--;
             if (killFlashTimer > 0) killFlashTimer--;
 
-            const moveSpd = 8.4;
+            const moveSpd = 9.0;
             if (keys.left) ship.targetX -= moveSpd;
             if (keys.right) ship.targetX += moveSpd;
-            ship.targetX = Math.max(36, Math.min(canvas.width - 36, ship.targetX));
+            ship.targetX = Math.max(44, Math.min(canvas.width - 44, ship.targetX));
             ship.x += (ship.targetX - ship.x) * 0.30;
 
+            // Brillos y chispas constantes alrededor de la Nave ZAARD
+            if (Math.random() < 0.85) {
+                const ang = Math.random() * Math.PI * 2;
+                const rad = 18 + Math.random() * 22;
+                sparks.push({
+                    x: ship.x + Math.cos(ang) * rad,
+                    y: ship.y + Math.sin(ang) * rad,
+                    vx: Math.cos(ang) * 1.4,
+                    vy: 1.5 + Math.random() * 2.2,
+                    life: 16,
+                    color: Math.random() < 0.5 ? '#22d3ee' : (Math.random() < 0.5 ? '#ff6b1a' : '#fef08a')
+                });
+            }
+
             for (const st of stars) {
-                st.y += st.spd + waveLevel * 0.24;
+                st.y += st.spd + waveLevel * 0.16;
                 if (st.y > canvas.height + 8) {
                     st.y = -8;
                     st.x = Math.random() * canvas.width;
@@ -1431,12 +1529,11 @@
                 sd.y += sd.spd;
                 if (sd.y - sd.size > canvas.height + 30) {
                     sd.y = -70 - Math.random() * 90;
-                    sd.x = 55 + Math.random() * (canvas.width - 110);
+                    sd.x = 65 + Math.random() * (canvas.width - 130);
                     sd.spriteIdx = (sd.spriteIdx + 1) % spaceDecoSprites.length;
                 }
             }
 
-            // Disparos continuos de la Nave ZAARD cada 4 cuadros (~65ms)
             continuousFireTimer--;
             if (continuousFireTimer <= 0) {
                 fireContinuousStream();
@@ -1449,7 +1546,6 @@
             coinSpawnTimer--;
             if (coinSpawnTimer <= 0) spawnCoinFromTop();
 
-            // Proyectiles de la Nave ZAARD
             for (let i = bullets.length - 1; i >= 0; i--) {
                 bullets[i].y += bullets[i].vy;
                 if (bullets[i].y < -20) {
@@ -1457,18 +1553,17 @@
                 }
             }
 
-            // Enemigos bajando y disparando cada ~1 segundo
             for (let i = enemies.length - 1; i >= 0; i--) {
                 const en = enemies[i];
                 en.y += en.vy;
                 if (en.kind === 'ufo') {
-                    en.phase += 0.1;
-                    en.x += Math.sin(en.phase) * 3.0 + en.vx * 0.55;
-                    if (en.x < 30) en.x = 30;
-                    if (en.x > canvas.width - 30) en.x = canvas.width - 30;
+                    en.phase += 0.08;
+                    en.x += Math.sin(en.phase) * 2.2 + en.vx * 0.45;
+                    if (en.x < 36) en.x = 36;
+                    if (en.x > canvas.width - 36) en.x = canvas.width - 36;
                 } else {
                     en.x += en.vx;
-                    if (en.x < 28 || en.x > canvas.width - 28) en.vx *= -1;
+                    if (en.x < 34 || en.x > canvas.width - 34) en.vx *= -1;
                 }
 
                 if (en.kind !== 'meteor') {
@@ -1482,16 +1577,16 @@
                 let destroyed = false;
                 for (let b = bullets.length - 1; b >= 0; b--) {
                     const distB = Math.hypot(en.x - bullets[b].x, en.y - bullets[b].y);
-                    if (distB < en.r + bullets[b].r + 4) {
+                    if (distB < en.r + bullets[b].r + 5) {
                         bullets.splice(b, 1);
                         en.hp--;
-                        spawnSparks(en.x, en.y, '#22d3ee', 5);
+                        spawnSparks(en.x, en.y, '#22d3ee', 6);
                         if (en.hp <= 0) {
                             destroyed = true;
                             clearedEnemies++;
                             coins += 5;
-                            spawnSparks(en.x, en.y, '#ff6b1a', 14);
-                            coinDrops.push({ x: en.x, y: en.y, r: 14, vy: 2.8 });
+                            spawnSparks(en.x, en.y, '#ff6b1a', 16);
+                            coinDrops.push({ x: en.x, y: en.y, r: 17, vy: 2.7 });
                             updateHud();
                             if (coins >= GOAL_COINS) {
                                 finishBatalla(true);
@@ -1507,28 +1602,26 @@
                     continue;
                 }
 
-                // Choque directo con enemigo = te mata en el intento
                 const distShip = Math.hypot(en.x - ship.x, en.y - ship.y);
-                if (distShip < en.r + 20) {
+                if (distShip < en.r + 24) {
                     enemies.splice(i, 1);
                     handlePlayerFatalHit("💥 ¡Te mató un choque directo contra un enemigo!");
                     if (!running) return;
                     continue;
                 }
 
-                if (en.y - en.r > canvas.height + 40) {
+                if (en.y - en.r > canvas.height + 45) {
                     enemies.splice(i, 1);
                 }
             }
 
-            // Disparos enemigos bajando: si te pegan = te matan en el intento
             for (let i = enemyBullets.length - 1; i >= 0; i--) {
                 const eb = enemyBullets[i];
                 eb.x += eb.vx;
                 eb.y += eb.vy;
 
                 const distHit = Math.hypot(eb.x - ship.x, eb.y - ship.y);
-                if (distHit < eb.r + 17) {
+                if (distHit < eb.r + 20) {
                     enemyBullets.splice(i, 1);
                     handlePlayerFatalHit("🔫 ¡Te mató un disparo enemigo!");
                     if (!running) return;
@@ -1540,15 +1633,14 @@
                 }
             }
 
-            // Monedas cayendo
             for (let i = coinDrops.length - 1; i >= 0; i--) {
                 const c = coinDrops[i];
                 c.y += c.vy;
                 const dist = Math.hypot(c.x - ship.x, c.y - ship.y);
-                if (dist < c.r + 28) {
+                if (dist < c.r + 32) {
                     coins++;
                     playTone(880, 1174, 0.08, 'sine', 0.11);
-                    spawnSparks(c.x, c.y, '#fbbf24', 6);
+                    spawnSparks(c.x, c.y, '#fbbf24', 7);
                     updateHud();
                     coinDrops.splice(i, 1);
                     if (coins >= GOAL_COINS) {
@@ -1572,44 +1664,72 @@
         }
 
         function drawZaardShip(x, y) {
-            const flameLen = 15 + Math.sin(enginePulse * 2.4) * 7;
+            const flameLen = 18 + Math.sin(enginePulse * 2.5) * 8;
+            const auraRad = 44 + Math.sin(enginePulse * 1.9) * 6;
             ctx.save();
 
+            // Halo brillante energético súper wow
+            const auraGrad = ctx.createRadialGradient(x, y, 6, x, y, auraRad);
+            auraGrad.addColorStop(0, 'rgba(34, 211, 238, 0.42)');
+            auraGrad.addColorStop(0.55, 'rgba(168, 85, 247, 0.25)');
+            auraGrad.addColorStop(1, 'rgba(255, 107, 26, 0)');
+            ctx.fillStyle = auraGrad;
+            ctx.beginPath();
+            ctx.arc(x, y, auraRad, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Llamas propulsoras agrandadas
             ctx.fillStyle = '#ff6b1a';
             ctx.beginPath();
-            ctx.moveTo(x - 10, y + 22);
-            ctx.lineTo(x - 5, y + 22 + flameLen);
-            ctx.lineTo(x, y + 22);
-            ctx.lineTo(x + 5, y + 22 + flameLen);
-            ctx.lineTo(x + 10, y + 22);
+            ctx.moveTo(x - 13, y + 26);
+            ctx.lineTo(x - 6, y + 26 + flameLen);
+            ctx.lineTo(x, y + 26);
+            ctx.lineTo(x + 6, y + 26 + flameLen);
+            ctx.lineTo(x + 13, y + 26);
             ctx.closePath();
             ctx.fill();
 
+            // Fuselaje grande de la Nave ZAARD
+            ctx.shadowColor = '#22d3ee';
+            ctx.shadowBlur = 16;
             ctx.fillStyle = '#190b33';
             ctx.strokeStyle = '#22d3ee';
-            ctx.lineWidth = 2.4;
+            ctx.lineWidth = 2.8;
             ctx.beginPath();
-            ctx.moveTo(x, y - 28);
-            ctx.lineTo(x + 28, y + 18);
-            ctx.lineTo(x + 10, y + 12);
-            ctx.lineTo(x, y + 22);
-            ctx.lineTo(x - 10, y + 12);
-            ctx.lineTo(x - 28, y + 18);
+            ctx.moveTo(x, y - 34);
+            ctx.lineTo(x + 35, y + 22);
+            ctx.lineTo(x + 12, y + 15);
+            ctx.lineTo(x, y + 27);
+            ctx.lineTo(x - 12, y + 15);
+            ctx.lineTo(x - 35, y + 22);
             ctx.closePath();
             ctx.fill();
             ctx.stroke();
 
-            ctx.fillStyle = '#a855f7';
+            // Cabina brillante
+            ctx.shadowBlur = 10;
+            ctx.fillStyle = '#c084fc';
             ctx.beginPath();
-            ctx.ellipse(x, y - 4, 6, 11, 0, 0, Math.PI * 2);
+            ctx.ellipse(x, y - 5, 7.5, 13, 0, 0, Math.PI * 2);
             ctx.fill();
 
+            // Punta fénix naranja brillante
             ctx.fillStyle = '#ff6b1a';
             ctx.beginPath();
-            ctx.moveTo(x, y - 28);
-            ctx.lineTo(x + 7, y - 14);
-            ctx.lineTo(x - 7, y - 14);
+            ctx.moveTo(x, y - 34);
+            ctx.lineTo(x + 9, y - 16);
+            ctx.lineTo(x - 9, y - 16);
             ctx.closePath();
+            ctx.fill();
+
+            // Destello estrella en el centro
+            const starBlink = 0.65 + 0.35 * Math.sin(enginePulse * 3);
+            ctx.globalAlpha = starBlink;
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.arc(x - 18, y + 4, 2.6, 0, Math.PI * 2);
+            ctx.arc(x + 18, y + 4, 2.6, 0, Math.PI * 2);
+            ctx.arc(x, y - 22, 3, 0, Math.PI * 2);
             ctx.fill();
 
             ctx.restore();
@@ -1620,15 +1740,15 @@
             if (en.kind === 'ufo') {
                 ctx.fillStyle = '#ef4444';
                 ctx.strokeStyle = '#fecdd3';
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 2.2;
                 ctx.beginPath();
-                ctx.ellipse(en.x, en.y, en.r, en.r * 0.55, 0, 0, Math.PI * 2);
+                ctx.ellipse(en.x, en.y, en.r, en.r * 0.56, 0, 0, Math.PI * 2);
                 ctx.fill();
                 ctx.stroke();
 
                 ctx.fillStyle = '#c084fc';
                 ctx.beginPath();
-                ctx.arc(en.x, en.y - 5, en.r * 0.45, Math.PI, 0);
+                ctx.arc(en.x, en.y - 6, en.r * 0.45, Math.PI, 0);
                 ctx.fill();
             } else if (en.kind === 'pod') {
                 ctx.beginPath();
@@ -1643,14 +1763,14 @@
 
                 ctx.save();
                 ctx.strokeStyle = '#fb7185';
-                ctx.lineWidth = 2.4;
+                ctx.lineWidth = 2.6;
                 ctx.beginPath();
                 ctx.arc(en.x, en.y, en.r, 0, Math.PI * 2);
                 ctx.stroke();
             } else {
                 ctx.fillStyle = '#10b981';
                 ctx.strokeStyle = '#ff6b1a';
-                ctx.lineWidth = 2.4;
+                ctx.lineWidth = 2.6;
                 ctx.beginPath();
                 ctx.arc(en.x, en.y, en.r, 0, Math.PI * 2);
                 ctx.fill();
@@ -1691,26 +1811,24 @@
                 ctx.restore();
             }
 
-            // Disparos continuos de la Nave ZAARD
             for (const b of bullets) {
                 ctx.save();
                 ctx.fillStyle = '#22d3ee';
                 ctx.shadowColor = '#22d3ee';
-                ctx.shadowBlur = 10;
+                ctx.shadowBlur = 12;
                 ctx.beginPath();
-                ctx.roundRect(b.x - 3, b.y - 11, 6, 20, 3);
+                ctx.roundRect(b.x - 3.5, b.y - 13, 7, 23, 3.5);
                 ctx.fill();
                 ctx.restore();
             }
 
-            // Disparos enemigos letales
             for (const eb of enemyBullets) {
                 ctx.save();
                 ctx.fillStyle = '#fb7185';
                 ctx.strokeStyle = '#fef08a';
-                ctx.lineWidth = 1.6;
+                ctx.lineWidth = 1.8;
                 ctx.shadowColor = '#ef4444';
-                ctx.shadowBlur = 10;
+                ctx.shadowBlur = 12;
                 ctx.beginPath();
                 ctx.arc(eb.x, eb.y, eb.r, 0, Math.PI * 2);
                 ctx.fill();
@@ -1718,7 +1836,6 @@
                 ctx.restore();
             }
 
-            // Monedas cayendo
             for (const c of coinDrops) {
                 ctx.save();
                 ctx.beginPath();
@@ -1732,26 +1849,23 @@
                 ctx.restore();
 
                 ctx.strokeStyle = '#fef08a';
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 2.2;
                 ctx.beginPath();
                 ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
                 ctx.stroke();
             }
 
-            // Enemigos
             for (const en of enemies) {
                 drawEnemy(en);
             }
 
-            // Nave ZAARD
             if (invulnerable === 0 || Math.floor(invulnerable / 5) % 2 === 0) {
                 drawZaardShip(ship.x, ship.y);
             }
 
-            // Chispas
             for (const s of sparks) {
                 ctx.fillStyle = s.color;
-                ctx.fillRect(s.x, s.y, 5, 5);
+                ctx.fillRect(s.x, s.y, 5.5, 5.5);
             }
         }
 
